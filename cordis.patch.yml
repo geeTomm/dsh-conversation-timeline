@@ -1,0 +1,5 @@
+# dsh-conversation-browser bundle 层：插入对话节点时间线插件入口。
+- insert:
+    - id: dsh-conversation-browser
+      name: '@dsh-external/dsh-conversation-browser'
+      config: {}

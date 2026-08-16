@@ -1,0 +1,49 @@
+{
+  "name": "@dsh-external/dsh-conversation-browser",
+  "version": "0.1.0",
+  "description": "DSH conversation timeline and cross-session search plugin",
+  "type": "module",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-name/dsh-conversation-timeline.git"
+  },
+  "homepage": "https://github.com/your-name/dsh-conversation-timeline",
+  "bugs": {
+    "url": "https://github.com/your-name/dsh-conversation-timeline/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek",
+    "plugin",
+    "conversation",
+    "timeline",
+    "search"
+  ],
+  "author": "dsh-conversation-timeline contributors",
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "license": "BSD-3-Clause",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-client-ui-slots": ">=0.0.1-rc <2"
+  }
+}
