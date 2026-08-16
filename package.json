@@ -6,11 +6,11 @@
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-name/dsh-conversation-timeline.git"
+    "url": "https://github.com/geeTomm/dsh-conversation-timeline.git"
   },
-  "homepage": "https://github.com/your-name/dsh-conversation-timeline",
+  "homepage": "https://github.com/geeTomm/dsh-conversation-timeline",
   "bugs": {
-    "url": "https://github.com/your-name/dsh-conversation-timeline/issues"
+    "url": "https://github.com/geeTomm/dsh-conversation-timeline/issues"
   },
   "keywords": [
     "dsh",
