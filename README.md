@@ -84,7 +84,7 @@ dev_install_package { "dir": "/path/to/dsh-conversation-timeline" }
 
 ## 说明
 
-- 当前搜索实现为逐会话文本扫描；如果历史会话非常多，建议后续接入 `session-query-sqlite` 的 FTS 索引。
+- 搜索采用双模式：优先尝试 `session-query-sqlite` 的 FTS 全文索引；如果部署关闭了 FTS（`openAt: never`），自动回退到逐会话文本扫描。
 - 当前包名为 `@dsh-external/dsh-conversation-timeline`，与仓库名保持一致。
 
 ## License
