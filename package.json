@@ -1,5 +1,5 @@
 {
-  "name": "@dsh-external/dsh-conversation-browser",
+  "name": "@dsh-external/dsh-conversation-timeline",
   "version": "0.1.0",
   "description": "DSH conversation timeline and cross-session search plugin",
   "type": "module",

@@ -38,12 +38,12 @@ DSH 对话节点时间线 + 跨会话搜索插件。
 ```json
 {
   "dependencies": {
-    "@dsh-external/dsh-conversation-browser": "link:/path/to/dsh-conversation-timeline"
+    "@dsh-external/dsh-conversation-timeline": "link:/path/to/dsh-conversation-timeline"
   },
   "dsh": {
     "profile": {
       "bundles": [
-        "@dsh-external/dsh-conversation-browser"
+        "@dsh-external/dsh-conversation-timeline"
       ]
     }
   }
@@ -77,15 +77,15 @@ dev_install_package { "dir": "/path/to/dsh-conversation-timeline" }
 
 插件只读访问 `ctx.sessionQuery`，不修改任何会话数据。
 
-- `GET /conversation-browser/api/sessions`
-- `GET /conversation-browser/api/search?q=...&includeTools=0|1`
-- `GET /conversation-browser/api/session/:id/events`
-- `GET /conversation-browser/api/session/:id/dialogue?limit=5&after=<seq>`
+- `GET /conversation-timeline/api/sessions`
+- `GET /conversation-timeline/api/search?q=...&includeTools=0|1`
+- `GET /conversation-timeline/api/session/:id/events`
+- `GET /conversation-timeline/api/session/:id/dialogue?limit=5&after=<seq>`
 
 ## 说明
 
 - 当前搜索实现为逐会话文本扫描；如果历史会话非常多，建议后续接入 `session-query-sqlite` 的 FTS 索引。
-- 当前包名保持为 `@dsh-external/dsh-conversation-browser`，仓库名暂定为 `dsh-conversation-timeline`。
+- 当前包名为 `@dsh-external/dsh-conversation-timeline`，与仓库名保持一致。
 
 ## License
 
