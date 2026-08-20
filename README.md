@@ -85,7 +85,7 @@ dev_install_package { "dir": "/path/to/dsh-conversation-timeline" }
 ## 说明
 
 - 搜索采用双模式：优先尝试 `session-query-sqlite` 的 FTS 全文索引；如果部署关闭了 FTS（`openAt: never`），自动回退到逐会话文本扫描。
-- 兼容 meow-memory：时间线只显示真实用户输入（`source.kind === "user"`），meow-memory 注入的上下文/记忆节点不会出现在时间线；跳转按 messageId 精确匹配，文本兜底时也跳过非用户节点。
+- 兼容 meow-memory：时间线只显示真实用户输入（`source.kind === "user"`），并忽略“可能相关的记忆 / 相关记忆 / 记忆，仅供参考”等记忆回填文本；跳转按 messageId 精确匹配，文本兜底时按用户消息行匹配并跳过非用户节点。
 
 ## License
 
